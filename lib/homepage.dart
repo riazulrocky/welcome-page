@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class homepage extends StatelessWidget {
   const homepage({super.key});
@@ -13,14 +15,20 @@ class homepage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.indigo),
-
-          body: const Center(
-            child: Image(
-              height: 400,
-              width: 400,
-              image: AssetImage('assets/images/illustration.png'),
-            ),
+      body: const Column(
+        children: [
+          CircleAvatar(
+            radius: 200,
+            foregroundImage: AssetImage('assets/images/illustration.png'),
           ),
+          Center(
+            child: Text(
+              'Welcome',
+              style: TextStyle(fontSize: 35),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
